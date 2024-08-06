@@ -104,12 +104,18 @@ class DisplayNotification {
     if (isAppForeground()) {
       return false; // Needs to be passed to onMessageReceived
     }
-    ImageDownload imageDownload = startImageDownloadInBackground();
-    CommonNotificationBuilder.DisplayNotificationInfo notificationInfo =
-        CommonNotificationBuilder.createNotificationInfo(context, params);
-    waitForAndApplyImageDownload(notificationInfo.notificationBuilder, imageDownload);
+    CommonNotificationBuilder.DisplayNotificationInfo notificationInfo = createNotification();
     showNotification(notificationInfo);
     return true;
+  }
+
+  // Creates the notification and returns created notification info.
+  public CommonNotificationBuilder.DisplayNotificationInfo createNotification() {
+    ImageDownload imageDownload = startImageDownloadInBackground();
+    CommonNotificationBuilder.DisplayNotificationInfo notificationInfo =
+            CommonNotificationBuilder.createNotificationInfo(context, params);
+    waitForAndApplyImageDownload(notificationInfo.notificationBuilder, imageDownload);
+    return notificationInfo;
   }
 
   @Nullable

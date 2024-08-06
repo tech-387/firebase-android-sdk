@@ -210,7 +210,7 @@ public class FirebaseMessagingService extends EnhancedIntentService {
   }
 
   /** Dispatch a message to the app's onMessageReceived method, or show a notification */
-  private void dispatchMessage(Intent intent) {
+  public void dispatchMessage(Intent intent) {
     Bundle data = intent.getExtras();
     if (data == null) {
       // The intent should always have at least one extra so this shouldn't be null, but
