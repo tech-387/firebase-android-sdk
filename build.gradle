@@ -65,8 +65,8 @@ apply plugin: com.google.firebase.gradle.plugins.PublishingPlugin
 apply plugin: com.google.firebase.gradle.plugins.ci.ContinuousIntegrationPlugin
 apply plugin: com.google.firebase.gradle.plugins.ci.SmokeTestsPlugin
 
-apply plugin: 'maven'
-group = 'com.github.tech-387.firebase-android-sdk'
+apply plugin: 'maven-publish'
+group = 'com.github.tech-387'
 
 
 firebaseContinuousIntegration {
@@ -100,6 +100,20 @@ configure(subprojects) {
         kotlin {
             target 'src/**/*.kt'
             ktfmt('0.41').googleStyle()
+        }
+    }
+}
+
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.tech-387'
+                artifactId = 'firebase-android-sdk'
+                version = '0.0.1'
+            }
         }
     }
 }
