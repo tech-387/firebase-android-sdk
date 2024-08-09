@@ -32,6 +32,7 @@ buildscript {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
+        maven { url 'https://jitpack.io' }
     }
 
     dependencies {
@@ -63,6 +64,10 @@ apply plugin: com.google.firebase.gradle.plugins.PublishingPlugin
 
 apply plugin: com.google.firebase.gradle.plugins.ci.ContinuousIntegrationPlugin
 apply plugin: com.google.firebase.gradle.plugins.ci.SmokeTestsPlugin
+
+apply plugin: 'maven'
+group = 'com.github.tech-387.firebase-android-sdk'
+
 
 firebaseContinuousIntegration {
     ignorePaths = [
