@@ -32,6 +32,7 @@ buildscript {
         maven {
             url "https://plugins.gradle.org/m2/"
         }
+        maven { url 'https://jitpack.io' }
     }
 
     dependencies {
@@ -86,6 +87,8 @@ configure(subprojects) {
     }
 
     apply plugin: "com.diffplug.spotless"
+    apply plugin: 'maven-publish'
+    group = 'com.github.tech-387'
 
     spotless {
         java {
@@ -95,6 +98,18 @@ configure(subprojects) {
         kotlin {
             target 'src/**/*.kt'
             ktfmt('0.41').googleStyle()
+        }
+    }
+
+    afterEvaluate {
+        publishing {
+            publications {
+                release(MavenPublication) {
+                    groupId = 'com.github.tech-387'
+                    artifactId = 'firebase-android-sdk'
+                    version = '1.0.0'
+                }
+            }
         }
     }
 }
