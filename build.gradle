@@ -106,7 +106,6 @@ configure(subprojects) {
         publishing {
             publications {
                 release(MavenPublication) {
-                    from components.release
                     groupId = 'com.github.tech-387'
                     artifactId = 'firebase-android-sdk'
                     version = '0.1.0'
