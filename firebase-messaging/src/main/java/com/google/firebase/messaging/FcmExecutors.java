@@ -32,7 +32,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  *
  * <p>Details for the FCM threading model seek to be documented here.
  */
-class FcmExecutors {
+public class FcmExecutors {
   // TODO(b/117848373): TikTok applications need to comply with go/tiktok-tattletale. Before we
   // migrate to use TikTok thread pools, threads need to use the whitelisted prefix
   // "Firebase-Messaging".

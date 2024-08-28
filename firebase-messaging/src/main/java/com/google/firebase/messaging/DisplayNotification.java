@@ -42,7 +42,7 @@ import java.util.concurrent.TimeoutException;
  * <p>These are a special type of message that we provide a means of handling on behalf of a client
  * app to show a notification.
  */
-class DisplayNotification {
+public class DisplayNotification {
 
   private static final int IMAGE_DOWNLOAD_TIMEOUT_SECONDS = 5;
 
