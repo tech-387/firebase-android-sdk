@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
 plugins {
     id 'com.google.protobuf'
     id 'firebase-library'
@@ -58,6 +59,18 @@ firebaseLibrary {
     releaseNotes {
         name.set("{{messaging_longer}}")
         versionName.set("messaging")
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.tech-387'
+                artifactId = 'firebase-messaging'
+                version = '1.0.6'
+            }
+        }
     }
 }
 
