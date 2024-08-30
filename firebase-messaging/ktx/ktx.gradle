@@ -26,6 +26,18 @@ firebaseLibrary {
     publishSources = true
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.tech-387'
+                artifactId = 'firebase-messaging-ktx'
+                version = '1.0.7'
+            }
+        }
+    }
+}
+
 android {
     namespace "com.google.firebase.messaging.ktx"    
     compileSdkVersion project.compileSdkVersion

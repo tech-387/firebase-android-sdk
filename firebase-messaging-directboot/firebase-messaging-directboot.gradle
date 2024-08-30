@@ -27,6 +27,18 @@ firebaseLibrary {
     }
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.tech-387'
+                artifactId = 'firebase-messaging-directboot'
+                version = '1.0.7'
+            }
+        }
+    }
+}
+
 android {
     adbOptions {
         timeOutInMs 60 * 1000
