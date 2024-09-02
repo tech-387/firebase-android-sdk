@@ -32,8 +32,8 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 groupId = 'com.github.tech-387'
-                artifactId = 'firebase-messaging-directboot'
-                version = '1.0.7'
+                artifactId = 'firebase-messaging-directboot-test'
+                version = '1.0.11'
             }
         }
     }

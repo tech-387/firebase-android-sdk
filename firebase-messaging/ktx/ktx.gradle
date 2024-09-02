@@ -31,8 +31,8 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 groupId = 'com.github.tech-387'
-                artifactId = 'firebase-messaging-ktx'
-                version = '1.0.10'
+                artifactId = 'firebase-messaging-ktx-test'
+                version = '1.0.11'
             }
         }
     }

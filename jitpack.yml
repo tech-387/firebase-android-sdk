@@ -2,4 +2,5 @@ jdk:
   - openjdk17
   
 install:
-  - ./gradlew publishReleasePublicationToMavenLocal
+  - ./gradlew -PprojectsToPublish="firebase-messaging,firebase-messaging-directboot,firebase-messaging:ktx" \
+    publishReleasingLibrariesToMavenLocal
