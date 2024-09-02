@@ -106,7 +106,7 @@ configure(subprojects) {
             publications {
                 release(MavenPublication) {
                     groupId = 'com.github.tech-387'
-                    artifactId = 'firebase-android-sdk-test'
+                    artifactId = 'firebase-android-sdk'
                     version = '1.0.11'
                 }
             }

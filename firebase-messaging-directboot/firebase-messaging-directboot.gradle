@@ -14,6 +14,7 @@
 
 plugins {
     id 'firebase-library'
+    id 'maven-publish'
 }
 
 firebaseLibrary {
@@ -31,9 +32,9 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                groupId = 'com.github.tech-387'
-                artifactId = 'firebase-messaging-directboot-test'
-                version = '1.0.11'
+                groupId = 'com.github.tech-387.firebase-messaging-directboot'
+                artifactId = 'firebase-messaging-directboot'
+                version = '1.0.12'
             }
         }
     }
