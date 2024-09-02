@@ -32,7 +32,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.github.tech-387'
                 artifactId = 'firebase-messaging'
-                version = '1.0.8'
+                version = '1.0.9'
             }
         }
     }
