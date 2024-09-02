@@ -14,7 +14,6 @@
 
 plugins {
     id 'firebase-library'
-    id 'maven-publish'
 }
 
 firebaseLibrary {
@@ -25,18 +24,6 @@ firebaseLibrary {
         name.set("Cloud Messaging Direct Boot")
         versionName.set("messaging-directboot")
         hasKTX.set(false)
-    }
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                groupId = 'com.google.firebase.messaging'
-                artifactId = 'firebase-messaging-directboot'
-                version = '1.0.14'
-            }
-        }
     }
 }
 

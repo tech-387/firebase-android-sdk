@@ -2,4 +2,4 @@ jdk:
   - openjdk17
   
 install:
-  - ./gradlew publishReleasePublicationToMavenLocal
+  - ./gradlew clean publishReleasePublicationToMavenLocal --rerun-tasks --no-build-cache

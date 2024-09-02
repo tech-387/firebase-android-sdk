@@ -15,7 +15,6 @@
 plugins {
     id 'firebase-library'
     id("kotlin-android")
-    id 'maven-publish'
 }
 
 firebaseLibrary {
@@ -25,18 +24,6 @@ firebaseLibrary {
         enabled.set(false)
     }
     publishSources = true
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                groupId = 'com.google.firebase.messaging.ktx'
-                artifactId = 'firebase-messaging-ktx'
-                version = '1.0.14'
-            }
-        }
-    }
 }
 
 android {
