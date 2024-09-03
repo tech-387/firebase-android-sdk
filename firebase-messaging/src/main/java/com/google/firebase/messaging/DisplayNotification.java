@@ -57,7 +57,7 @@ public class DisplayNotification {
     this.params = params;
   }
 
-  private boolean isAppForeground() {
+  public boolean isAppForeground() {
     KeyguardManager keyguardManager =
         (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
     if (keyguardManager.inKeyguardRestrictedInputMode()) {

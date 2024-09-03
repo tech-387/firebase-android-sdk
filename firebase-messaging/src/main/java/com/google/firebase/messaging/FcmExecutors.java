@@ -81,7 +81,7 @@ public class FcmExecutors {
   @SuppressWarnings("ThreadChecker")
   // TODO(b/258424124): Migrate to go/firebase-android-executors
   @SuppressLint("ThreadPoolCreation")
-  static ExecutorService newNetworkIOExecutor() {
+  public static ExecutorService newNetworkIOExecutor() {
     // TODO(b/148493968): consider use PoolableExecutors for all FCM threading
     return Executors.newSingleThreadExecutor(new NamedThreadFactory(THREAD_NETWORK_IO));
   }
