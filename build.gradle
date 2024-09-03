@@ -65,6 +65,7 @@ apply plugin: com.google.firebase.gradle.plugins.PublishingPlugin
 apply plugin: com.google.firebase.gradle.plugins.ci.ContinuousIntegrationPlugin
 apply plugin: com.google.firebase.gradle.plugins.ci.SmokeTestsPlugin
 
+
 firebaseContinuousIntegration {
     ignorePaths = [
             /.*\.gitignore$/,
@@ -107,7 +108,7 @@ configure(subprojects) {
                 release(MavenPublication) {
                     groupId = 'com.github.tech-387'
                     artifactId = 'firebase-android-sdk'
-                    version = '1.0.17'
+                    version = '1.0.18'
                 }
             }
         }
